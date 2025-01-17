@@ -1,0 +1,131 @@
+:root {
+    --dark: #493628;
+    --lightdark: #AB886D;
+    --Text: #D6C0B3;
+    --back: #E4E0E1;
+}
+
+body {
+    background-color: var(--back);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.mobile {
+    display: none;
+
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.navbar-header ul li a {
+    text-decoration: none;
+
+}
+
+.navbar-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 0;
+    background-color: var(--Text);
+}
+
+.navbar-header ul {
+    width: 600px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+.navbar-header ul :hover {
+    color: var(--dark);
+    text-decoration: none;
+    scale: 1.2;
+}
+
+.navbar-collapse ul {
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-collapse ul li {
+    list-style: none;
+}
+
+.navbar-collapse ul li a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.navbar-collapse ul li a:hover {
+    color: #7C444F;
+}
+
+header {
+    background-color: var(--dark);
+    padding: 20px 0;
+    border-bottom: 2px solid #ccc;
+    color: var(--Text);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Flexbox layout for the content */
+.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.box .boxes {
+    width: 400px;
+    height: 300px;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+
+    .mobile {
+        display: block;
+
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navb {
+        display: none;
+    }
+
+    .navbar-collapse {
+        background-color: var(--lightdark);
+    }
+
+    .navbar-collapse ul li a {
+        padding: 10px;
+        text-align: center;
+        display: block;
+        border-bottom: 1px solid var(--Text);
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+}

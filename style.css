@@ -12,63 +12,51 @@ body {
     position: relative;
 }
 
-.mobile {
-    display: none;
-
-}
-
 .navbar-brand {
     font-size: 2rem;
-    color: var(--dark);
+    color: var(--dark) !important;
 }
 
-.navbar-header ul li a {
-    text-decoration: none;
 
-}
 
-.navbar-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 15px;
-    margin: 0;
+.navbar-default {
     background-color: var(--Text);
+    border: none;
 }
 
-.navbar-header ul {
-    width: 600px;
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    font-size: 2rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
+.navbar-toggle {
+    border: 1px solid var(--dark);
 }
 
-.navbar-header ul :hover {
-    color: var(--dark);
-    text-decoration: none;
-    scale: 1.2;
+.navbar-toggle .icon-bar {
+    background-color: var(--dark);
+}
+
+.navbar-collapse {
+    background-color: var(--lightdark);
+    padding: 0;
 }
 
 .navbar-collapse ul {
-
     margin: 0;
     padding: 0;
 }
 
 .navbar-collapse ul li {
     list-style: none;
+    text-align: center;
+    border-bottom: 1px solid var(--Text);
 }
 
 .navbar-collapse ul li a {
     color: var(--dark);
     text-decoration: none;
+    display: block;
+    padding: 10px;
 }
 
 .navbar-collapse ul li a:hover {
-    color: #7C444F;
+    background-color: var(--Text);
 }
 
 header {
@@ -81,51 +69,38 @@ header {
 header h1 {
     margin: 0;
     font-size: 1.5em;
-    text-align: center;
 }
 
-/* Flexbox layout for the content */
-.box {
+.row {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
 }
 
-.box .boxes {
-    width: 400px;
-    height: 300px;
+.tall-section {
+    background-color: var(--lightdark);
+    padding: 20px;
+    margin: 20px auto; /* Centers the sections */
+    width: 90%; /* Responsive width */
+    max-width: 420px; /* Limit max width */
+    color: var(--dark);
+    text-align: center; /* Centers text inside */
 }
 
-/* Mobile-Specific Adjustments */
-@media (max-width: 768px) {
 
-    .mobile {
-        display: block;
 
-    }
+.tall-section h3 {
+    margin-top: 0;
+}
 
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
+.tall-section a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--dark);
+    text-decoration: none;
+}
 
-    .navb {
-        display: none;
-    }
-
-    .navbar-collapse {
-        background-color: var(--lightdark);
-    }
-
-    .navbar-collapse ul li a {
-        padding: 10px;
-        text-align: center;
-        display: block;
-        border-bottom: 1px solid var(--Text);
-    }
-
-    header h1 {
-        font-size: 1.2rem;
-    }
+.tall-section a:hover {
+    color: var(--Text);
 }
